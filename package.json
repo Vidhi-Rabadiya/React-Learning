@@ -1,0 +1,25 @@
+{
+  "name": "react_learning",
+  "version": "1.0.0",
+  "description": "learning react from scratch",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vidhi-Rabadiya/React-Learning.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Vidhi Rabadiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vidhi-Rabadiya/React-Learning/issues"
+  },
+  "homepage": "https://github.com/Vidhi-Rabadiya/React-Learning#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
