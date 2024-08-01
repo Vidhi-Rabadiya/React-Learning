@@ -2,8 +2,9 @@
   "name": "react_learning",
   "version": "1.0.0",
   "description": "learning react from scratch",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -20,6 +21,14 @@
   },
   "homepage": "https://github.com/Vidhi-Rabadiya/React-Learning#readme",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
