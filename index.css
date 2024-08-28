@@ -1,3 +1,36 @@
-#heading {
-    color: blue;
+.headerContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLogo {
+    height: 50px;
+    width: 35px;
+}
+
+.restaurantCardContainer {
+    height: 350px;
+    width: 160px;
+    background-color: whitesmoke;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.restaurantCardContainer:hover {
+    border: 2px;
+}
+
+.restaurantCardImage {
+    height: 158px;
+    width: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topRatedButton {
+    cursor: pointer;
 }

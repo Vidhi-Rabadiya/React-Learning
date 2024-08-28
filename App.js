@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Body from "./src/components/Body";
+import Header from "./src/components/Header";
 
-const heading = React.createElement("h1", { id: "heading" }, "Hellow World from React");
-
-const child = React.createElement("div", { id: "child" }, heading);
-
-const parent = React.createElement("div", { id: "parent" }, child);
-
+const App = () => {
+    return (
+        <div>
+            <Header />
+            <Body />
+        </div>
+    )
+}
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(parent);
+root.render(<App />);
