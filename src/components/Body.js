@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const Body = () => {
 
@@ -27,7 +28,7 @@ const Body = () => {
         <div className="mainContainer">
             {
                 restaurantCardList?.map((rest) => {
-                    return <RestaurantCard key={rest.info.id} info={rest.info} />
+                    return <Link key={rest.info.id} to={"/restaurant/" + rest.info.id}> <RestaurantCard info={rest.info} /></Link>
                 })
             }
         </div>

@@ -34,3 +34,9 @@
 .topRatedButton {
     cursor: pointer;
 }
+
+.restaurantDetails {
+    border: 1px solid black;
+    padding: 5px;
+    width: fit-content;
+}
