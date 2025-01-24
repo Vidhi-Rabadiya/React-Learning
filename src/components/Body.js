@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 
 const Body = () => {
 
     const [restaurantCardList, setRestaurantCardList] = useState([])
     useEffect(() => {
-        console.log("rendered")
         getListData();
     }, [])
     const getListData = async () => {
@@ -15,20 +14,21 @@ const Body = () => {
         setRestaurantCardList(listData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
 
+    const PromatedRestaurantCard = withPromotedLabel(RestaurantCard);
     if (restaurantCardList?.length === 0) {
         return <div>
             loading...
         </div>
     }
     return <div>
-        <button className="topRatedButton" onClick={() => {
+        <button className="bg-blue-500 p-2 m-4 rounded-lg" onClick={() => {
             const list = restaurantCardList.filter((card) => card.info.avgRating > 4.5)
             setRestaurantCardList(list)
         }}>top rated restaurants</button>
-        <div className="mainContainer">
+        <div className="flex flex-wrap">
             {
                 restaurantCardList?.map((rest) => {
-                    return <Link key={rest.info.id} to={"/restaurant/" + rest.info.id}> <RestaurantCard info={rest.info} /></Link>
+                    return <Link key={rest.info.id} to={"/restaurant/" + rest.info.id}> <PromatedRestaurantCard info={rest.info} /></Link>
                 })
             }
         </div>
